@@ -1,8 +1,7 @@
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt')
 const asyncHandler = require('express-async-handler')
-import { UserModel } from '../models/User.js'
-
+const UserModel = require('../models/User')
 
 const registerUser = asyncHandler(async (req, res) => {
     const { username, email, password} = req.body
@@ -12,11 +11,30 @@ const registerUser = asyncHandler(async (req, res) => {
         throw new Error('Please input all the fields')
     }
 
-    const user = await UserModel.findOne({email})
+    const userExists = await UserModel.findOne({email})
 
-    if(user) {
+    if(userExists) {
         res.status(400).json({message: 'User already exists'})
     }
+
+    const user = await UserModel.create({
+        username,
+        email,
+        password
+    })
+
+    if(user) {
+        res.status(201).json({
+            _id: user.id,
+            username: user.username,
+            email: user.email
+        })
+    } else{
+        res.status(400)
+        throw new Error('Invalid user credentials')
+    }
+
+    
 })
 
 

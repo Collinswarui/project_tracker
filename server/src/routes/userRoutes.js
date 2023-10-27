@@ -1,13 +1,14 @@
 // Setting up authentication routes
 const express =  require('express')
+const { registerUser } = require('../controllers/userController')
 
 
 const router = express.Router()
 
-router.post('/register')
+router.post('/register', registerUser)
 
 router.post('/login')
 
 
 
-module.exports =  { router  }
+module.exports =  router  
