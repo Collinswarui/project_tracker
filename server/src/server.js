@@ -16,7 +16,7 @@ app.use(express.json());
 app.use(cors());
 
 // Setting up api endpoints
-app.use('/auth', userRouter)
+app.use('/auth', userRouter.router)
 
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
