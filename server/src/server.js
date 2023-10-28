@@ -5,7 +5,7 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 // importing user routes
-const userRouter = require('./routes/userRoutes')
+require('./routes/userRoutes')
 
 require('dotenv').config();
 
@@ -13,10 +13,12 @@ const app = express();
 
 // set up middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: false}));
 app.use(cors());
 
 // Setting up api endpoints
-app.use('/auth', userRouter)
+app.use('/api', require('./routes/userRoutes')
+)
 
 mongoose.connect(process.env.MONGO_URI, {
     useNewUrlParser: true,
@@ -24,8 +26,8 @@ mongoose.connect(process.env.MONGO_URI, {
 }).then(() => console.log("Connected to DB"))
   .catch(console.error);
   
-const port = process.env.PORT  || 3001;
+const port = process.env.PORT  || 5000;
 
-app.listen(() => {
+app.listen(port, () => {
     console.log(`Server started at port ${port}`)
 })
