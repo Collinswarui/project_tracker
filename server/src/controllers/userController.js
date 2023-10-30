@@ -2,7 +2,12 @@
 const bcrypt = require('bcrypt')
 const asyncHandler = require('express-async-handler')
 const UserModel = require('../models/User')
+const expressAsyncHandler = require('express-async-handler')
 
+
+// @desc Register new user 
+// @route POST /api/register
+// @access Public
 const registerUser = asyncHandler(async (req, res) => {
     const { username, email, password} = req.body
 
@@ -41,11 +46,34 @@ const registerUser = asyncHandler(async (req, res) => {
         })
     } else{
         res.status(400)
-        throw new Error('Invalid user credentials')
+        throw new Error('Invalid user data')
     }
 
     
 })
 
 
-module.exports = {registerUser}
+// @desc Login user 
+// @route POST /api/login
+// @access public
+const loginUser = expressAsyncHandler(async (req, res) => {
+    const {email, password} = req.body
+
+    // check for user email
+    const user = await UserModel.findOne({email})
+
+    if(user && (await bcrypt.compare(password, user.password))) {
+        res.json({
+            _id: user.id,
+            name: user.username,
+            email: user.email,
+            // token: genarateToken(user._id)
+        })
+    } else{
+        res.status(400)
+        throw new Error('Invalid user Credentials')
+    }
+    
+})
+
+module.exports = {registerUser, loginUser}
