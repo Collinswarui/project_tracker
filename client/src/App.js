@@ -4,6 +4,7 @@ import {SavedProj} from './pages/SavedProj'
 import {Auth} from '../src/pages/Auth'
 import {CreateProj} from '../src/pages/CreateProj'
 import { Navbar } from './components/Navbar';
+import { Login } from './pages/Login'
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Home />}/>
-          <Route path='/auth' element={<Auth />}/>
+          <Route path='/register' element={<Auth />}/>
+          <Route path='/login' element={<Login />}/>
           <Route path='createProject' element={<CreateProj />}/>
           <Route path='/savedProject' element={<SavedProj />} />
         </Routes>
