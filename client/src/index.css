@@ -45,7 +45,7 @@ body {
   border-radius: 15px;
   box-shadow: 0 0 5px rgba(18, 14, 39, 0.8);
   margin: 50px;
-  width: 30%;
+  width: 50%;
 }
 
 .form-group {
@@ -81,10 +81,11 @@ input {
 }
 
 a {
-  color: white;
+  color: rgb(95, 218, 13);
   text-decoration: none;
   margin: 10px;
-  font-size: 15px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .create-recipe {
@@ -133,4 +134,48 @@ img {
 p {
   max-width: 400px;
   font-size: 16px;
+}
+
+button {
+  background-color: rgb(73, 141, 138);
+  border-radius: 16px;
+  border: none;
+  width: 5.2rem;
+  height: 25px;
+  color: bisque;
+  font-size: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  outline: none !important;
+}
+
+button :hover {
+  background-color: rgb(77, 31, 5);
+  transform: scale(0.98);  
+  
+}
+
+
+@media (max-width: 768px) {
+  .auth-container{
+    width: 80%;
+  }
+
+  .navbar{
+    font-size: 1rem;
+  }
+
+  a{
+    font-size: 13px;
+    margin: 7px;
+  }
+
+  p{
+    font-size: 12px;
+  }
+
+  label{
+    font-weight: 700;
+    font-size: 12px;
+  }
 }
