@@ -14,15 +14,14 @@ const registerUser = asyncHandler(async (req, res) => {
     // Check if the user has filled in all 
     // the fields before submitting the form
     if(!username || !email || !password) {
-        res.status(400)
-        throw new Error('Please input all the fields')
+        res.status(400).json({message: 'Please input all the fields'})
     }
 
     // Check if user exists in the system
     const userExists = await UserModel.findOne({email})
 
     if(userExists) {
-        res.status(400).json({message: 'User already exists'})
+        res.status(400).json({message: 'A user with this email already exists'})
     }
 
 
