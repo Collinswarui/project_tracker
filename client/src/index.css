@@ -136,6 +136,12 @@ p {
   font-size: 16px;
 }
 
+.error-message{
+  color: red; 
+  font-size: 17px; 
+  margin: 5px; 
+}
+
 button {
   background-color: rgb(73, 141, 138);
   border-radius: 16px;
