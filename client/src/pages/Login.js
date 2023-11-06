@@ -7,6 +7,7 @@ import { useCookies } from 'react-cookie'
 export const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
+    const [ error, setError] = useState("")
     const navigate = useNavigate()
     const [_, setCookies] = useCookies(["access_token"])
 
@@ -23,8 +24,12 @@ export const Login = () => {
         setCookies("access_token", response.data.token)
         window.localStorage.setItem("userID", response.data.userID)
         navigate('/')
-      } catch(error) {
-        console.error(error)
+      } catch (error) {
+        if(error.response && error.response.status === 400) {
+          setError(error.response.data.message)
+        } else {
+          console.error(error)
+        }
       }
     }
   
@@ -32,6 +37,7 @@ export const Login = () => {
         <div className="auth-container">
         <form onSubmit={onSubmit}>
         <h2>Login</h2>
+        {error && <div className="error-message">{error}</div>} 
         <div className="form-group">
           <label htmlFor="email">Email: </label>
           <input 
