@@ -44,8 +44,7 @@ const registerUser = asyncHandler(async (req, res) => {
             email: user.email
         })
     } else{
-        res.status(400)
-        throw new Error('Invalid user credentials')
+        res.status(400).json({message: 'Invalid user credentials'})
     }
 
     
@@ -77,8 +76,7 @@ const loginUser = expressAsyncHandler(async (req, res) => {
             // token: genarateToken(user._id)
         })
     } else{
-        res.status(400)
-        throw new Error('User does not exist')
+        res.status(400).json({message: 'User does not exist'})
     }
     
 })

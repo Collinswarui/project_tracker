@@ -2,13 +2,15 @@ import { useState } from "react"
 import { Link } from "react-router-dom"
 import axios from 'axios'
 import { useNavigate } from "react-router-dom"
+import { useCookies } from 'react-cookie'
 
 export const Login = () => {
     const [email, setEmail] = useState("")
     const [password, setPassword] = useState("")
     const navigate = useNavigate()
+    const [_, setCookies] = useCookies(["access_token"])
 
-    
+
     // Connecting the Login form to the login API
     const onSubmit = async (event) => {
       event.preventDefault()
@@ -18,7 +20,8 @@ export const Login = () => {
           email,
           password
         })
-        console.log(response)
+        setCookies("access_token", response.data.token)
+        window.localStorage.setItem("userID", response.data.userID)
         navigate('/')
       } catch(error) {
         console.error(error)
