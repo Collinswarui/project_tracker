@@ -24,6 +24,7 @@ export const Login = () => {
         setCookies("access_token", response.data.token)
         window.localStorage.setItem("userID", response.data.userID)
         navigate('/')
+        console.log(response)
       } catch (error) {
         if(error.response && error.response.status === 400) {
           setError(error.response.data.message)
