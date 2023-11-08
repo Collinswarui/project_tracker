@@ -161,6 +161,54 @@ button :hover {
   
 }
 
+.landing {
+  padding: 20px;
+}
+
+.landing h1 {
+  font-size: 36px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.landing p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.landing h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.landing ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.landing li {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.cta-buttons {
+  margin-top: 20px;
+}
+
+.cta-buttons button {
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.cta-buttons button:hover {
+  background-color: #0056b3;
+}
+
 
 @media (max-width: 768px) {
   .auth-container{
