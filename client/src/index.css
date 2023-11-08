@@ -72,7 +72,7 @@ input {
   height: 80px;
   background-color: black;
   display: flex;
-  justify-content: center;
+  justify-content: right;
   align-items: center;
   color: white;
   text-decoration: none;
@@ -83,7 +83,7 @@ input {
 a {
   color: rgb(95, 218, 13);
   text-decoration: none;
-  margin: 10px;
+  margin: 35px;
   font-size: 20px;
   font-weight: bold;
 }
@@ -153,6 +153,7 @@ button {
   font-weight: bold;
   cursor: pointer;
   outline: none !important;
+  margin-right: 10px;
 }
 
 button :hover {
@@ -162,18 +163,26 @@ button :hover {
 }
 
 .landing {
+  text-align: center;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+/* Paragraph Styles */
+.landing p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+  text-align: left; /* Align the paragraph to the left */
+  margin-left: 20px; /* Add some left margin for spacing */
+  width: 80%; /* Limit the width of the paragraph to 80% of the container */
 }
 
 .landing h1 {
   font-size: 36px;
   color: #333;
-  margin-bottom: 20px;
-}
-
-.landing p {
-  font-size: 18px;
-  color: #666;
   margin-bottom: 20px;
 }
 
@@ -203,6 +212,7 @@ button :hover {
   border: none;
   cursor: pointer;
   margin: 0 10px;
+  transition: background-color 0.3s ease;
 }
 
 .cta-buttons button:hover {
