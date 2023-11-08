@@ -22,7 +22,7 @@ export const Login = () => {
           password
         })
         setCookies("access_token", response.data.token)
-        window.localStorage.setItem("userID", response.data.userID)
+        window.localStorage.setItem("userID", response.data.user_id)
         navigate('/')
         console.log(response)
       } catch (error) {

@@ -61,9 +61,10 @@ const loginUser = expressAsyncHandler(async (req, res) => {
     const user = await UserModel.findOne({email})
 
     const generateToken = (id) => {
-        return jwt.sign({ id }, process.env.JWT_SECRET, {
+        return jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
             expiresIn: '30d',
         })
+        
     }
 
     if(user && (await bcrypt.compare(password, user.password))) {
