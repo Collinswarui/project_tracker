@@ -5,19 +5,32 @@ import {Auth} from '../src/pages/Auth'
 import {CreateProj} from '../src/pages/CreateProj'
 import { Navbar } from './components/Navbar';
 import { Login } from './pages/Login'
+import { Landing } from './pages/Landing'
+import { useCookies }  from 'react-cookie'
 
 
 function App() {
+  const [cookies] = useCookies(["access_token"])
+
+
   return (
     <div className="App">
       <Router>
         <Navbar />
         <Routes>
-          <Route path='/' element={<Home />}/>
-          <Route path='/register' element={<Auth />}/>
-          <Route path='/login' element={<Login />}/>
-          <Route path='createProject' element={<CreateProj />}/>
-          <Route path='/savedProject' element={<SavedProj />} />
+          <Route path='/' element={<Landing />}/>
+          {cookies.access_token ? (
+            <>
+              <Route path='/home' element={<Home />}/>
+              <Route path='/createProject' element={<CreateProj />}/>
+              <Route path='/savedProject' element={<SavedProj />} />
+            </>
+          ) : (
+            <>
+             <Route path='/register' element={<Auth />}/>
+             <Route path='/login' element={<Login />}/>
+            </>
+          )}
         </Routes>
       </Router>
       </div>

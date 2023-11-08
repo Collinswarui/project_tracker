@@ -12,13 +12,19 @@ export const Navbar = () => {
   const logout = () => {
     setCookies("access_token", "")
     window.localStorage.removeItem("userID")
-    navigate('/register')
+    navigate('/')
   }
   return (
     <div className='navbar'>
-      <Link to='/'> Home</Link>
+      {/* logged in user can access this navbar */}
+      {cookies.access_token && 
+      <>
+      <Link to='/home'> Home</Link>
       <Link to='/createProject'>Create Project</Link>
       <Link to='/savedProject'> Saved Projects</Link>
+      </>}
+      
+      
       {!cookies.access_token ? ( 
       <Link to='/register'>Login/Register</Link>
       ) : (

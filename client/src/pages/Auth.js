@@ -23,7 +23,7 @@ export const Auth = () => {
         password
       })
       // alert('Registration Complete')
-      navigate("/")
+      navigate("/home")
     } catch (error) {
       if(error.response && error.response.status === 400) {
         setError(error.response.data.message)
