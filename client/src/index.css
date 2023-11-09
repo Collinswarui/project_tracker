@@ -127,15 +127,15 @@ h2 {
   margin-bottom: 10px;
 } */
 
-/* img {
+img {
   width: 400px;
-} */
+}
 
 p {
   max-width: 400px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 25px;
-  margin-bottom: 35px;
+  margin-bottom: 25px;
 }
 
 .error-message{
@@ -181,15 +181,15 @@ button :hover {
   align-items: center;
 }
 
-.landing p{
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
-  background-color: rgb(245, 237, 228);
+.image-wrapper p{
   padding: 16px;
-  border-radius: 16px;
   margin-left: 10%;
   color: rgb(4, 4, 90);
-  height: 150px;
   display: inline-block;
+  position: absolute;
+  top: 45%;
+  left: 15%;
+  transform: translate(-50%, -50%);
 }
 
 .landing h1{
@@ -197,15 +197,34 @@ button :hover {
   color: rgb(231, 127, 7);
 }
 
-.landing img{
-  max-width: 550px;
-  height: 300px;
-  border-radius: 15px;
-  margin-bottom: 15px;
+.image-wrapper img{
+  height: 250px;
+  margin-bottom: 35px;
+  top: 50%;
+  left: 65%;
+  transform: translate(140%, 5%);
+}
+.wrapper-img img{
+  height: 250px;
+  margin-bottom: 35px;
+  display: inline-block;
+  position: absolute;
+  left: 20%;
+  margin-bottom: 35px;
+  
+}
+
+.wrapper-img p{
+  left: 65%;
+  transform: translate(190%, 55%);
+  color: rgb(4, 4, 90);
+
 }
 
 .cta-buttons{
   margin-left: 10%;
+  /* transform: translate(10%, 1195%); */
+
 }
 
 

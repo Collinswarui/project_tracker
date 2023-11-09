@@ -1,12 +1,16 @@
  import image from '../images/image.png'
+ import image2 from '../images/img2.png'
  
  export const Landing = () => {
     return (
       <div className="landing">
         <h1>Welcome to Project Tracker</h1>
-        <p>Track and manage your projects with ease using our project tracking system. Whether you're working on personal projects, collaborating with a team, or managing a business, our tool can help you stay organized and on top of your project's progress.</p>
+        <div className='image-wrapper'>
+           <p>Track and manage your projects with ease using our project tracking system. Whether you're working on personal projects, collaborating with a team, or managing a business, our tool can help you stay organized and on top of your project's progress.</p>
 
-        <img src={image}/>
+           <img src={image}/>
+        </div>
+       
 
         <h2>Key Features:</h2>
         <ul>
@@ -18,7 +22,11 @@
         </ul>
   
         <h2>Get Started:</h2>
-        <p>Ready to take control of your projects? Sign up or log in to get started with Project Tracker. With our user-friendly interface, you can start managing your projects more efficiently today.</p>
+        <div className='wrapper-img'>
+          <img src={image2}/>
+          <p>Ready to take control of your projects? Sign up or log in to get started with Project Tracker. With our user-friendly interface, you can start managing your projects more efficiently today.</p>
+        </div>
+
   
         <div className="cta-buttons">
           <button>Sign Up</button>
