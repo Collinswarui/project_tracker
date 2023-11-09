@@ -13,10 +13,10 @@ code {
 }
 
 .App {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -104,7 +104,7 @@ a {
   display: flex;
   flex-direction: column;
 }
-ul {
+/* ul {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -114,7 +114,7 @@ li {
   border: 1px solid black;
   padding: 10px;
   margin-bottom: 10px;
-}
+} */
 
 h2 {
   margin-top: 0;
@@ -133,7 +133,9 @@ img {
 
 p {
   max-width: 400px;
-  font-size: 16px;
+  font-size: 22px;
+  line-height: 25px;
+  margin-bottom: 35px;
 }
 
 .error-message{
@@ -146,7 +148,7 @@ button {
   background-color: rgb(73, 141, 138);
   border-radius: 16px;
   border: none;
-  width: 5.2rem;
+  width: 7.2rem;
   height: 25px;
   color: bisque;
   font-size: 12px;
@@ -162,62 +164,38 @@ button :hover {
   
 }
 
-.landing {
-  text-align: center;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-}
-
-/* Paragraph Styles */
-.landing p {
-  font-size: 18px;
-  color: #666;
-  margin-bottom: 20px;
-  text-align: left; /* Align the paragraph to the left */
-  margin-left: 20px; /* Add some left margin for spacing */
-  width: 80%; /* Limit the width of the paragraph to 80% of the container */
-}
-
-.landing h1 {
-  font-size: 36px;
-  color: #333;
-  margin-bottom: 20px;
-}
-
-.landing h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 10px;
+.landing{
+  margin: 45px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: rgb(48, 49, 49);
 }
 
 .landing ul {
-  list-style: disc;
-  margin-left: 20px;
+  list-style: none;
 }
 
-.landing li {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 10px;
+.landing li{
+  font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.cta-buttons {
-  margin-top: 20px;
+.landing p{
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  padding: 16px;
+  border-radius: 16px;
+  margin-left: 7%;
 }
 
-.cta-buttons button {
-  font-size: 14px;
-  border: none;
-  cursor: pointer;
-  margin: 0 10px;
-  transition: background-color 0.3s ease;
+.landing h1{
+  text-align: center;
 }
 
-.cta-buttons button:hover {
-  background-color: #0056b3;
+.cta-buttons{
+  margin-left: 10%;
 }
+
 
 
 @media (max-width: 768px) {
@@ -235,7 +213,7 @@ button :hover {
   }
 
   p{
-    font-size: 12px;
+    font-size: 14px;
   }
 
   label{

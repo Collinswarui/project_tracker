@@ -3,7 +3,7 @@
       <div className="landing">
         <h1>Welcome to Project Tracker</h1>
         <p>Track and manage your projects with ease using our project tracking system. Whether you're working on personal projects, collaborating with a team, or managing a business, our tool can help you stay organized and on top of your project's progress.</p>
-  
+        
         <h2>Key Features:</h2>
         <ul>
           <li>Project Creation: Easily create new projects and define project details.</li>
