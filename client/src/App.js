@@ -19,18 +19,11 @@ function App() {
         <Navbar />
         <Routes>
           <Route path='/' element={<Landing />}/>
-          {cookies.access_token ? (
-            <>
-              <Route path='/home' element={<Home />}/>
-              <Route path='/createProject' element={<CreateProj />}/>
-              <Route path='/savedProject' element={<SavedProj />} />
-            </>
-          ) : (
-            <>
-             <Route path='/register' element={<Auth />}/>
-             <Route path='/login' element={<Login />}/>
-            </>
-          )}
+            <Route path='/home' element={<Home />}/>
+            <Route path='/createProject' element={<CreateProj />}/>
+            <Route path='/savedProject' element={<SavedProj />} />
+            <Route path='/register' element={<Auth />}/>
+            <Route path='/login' element={<Login />}/>
         </Routes>
       </Router>
       </div>
