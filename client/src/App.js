@@ -6,11 +6,11 @@ import {CreateProj} from '../src/pages/CreateProj'
 import { Navbar } from './components/Navbar';
 import { Login } from './pages/Login'
 import { Landing } from './pages/Landing'
-import { useCookies }  from 'react-cookie'
+// import { useCookies }  from 'react-cookie'
 
 
 function App() {
-  const [cookies] = useCookies(["access_token"])
+  // const [cookies] = useCookies(["access_token"])
 
 
   return (
