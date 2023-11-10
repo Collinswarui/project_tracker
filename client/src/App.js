@@ -6,6 +6,7 @@ import {CreateProj} from '../src/pages/CreateProj'
 import { Navbar } from './components/Navbar';
 import { Login } from './pages/Login'
 import { Landing } from './pages/Landing'
+import { Footer } from './components/Footer'
 // import { useCookies }  from 'react-cookie'
 
 
@@ -25,6 +26,7 @@ function App() {
             <Route path='/register' element={<Auth />}/>
             <Route path='/login' element={<Login />}/>
         </Routes>
+        <Footer />
       </Router>
       </div>
   );
