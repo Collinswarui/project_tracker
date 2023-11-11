@@ -13,8 +13,8 @@ code {
 }
 
 .App {
-  /* display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column;
   justify-content: center;
   align-items: center; */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -47,7 +47,8 @@ body {
   background-color: rgb(18, 14, 39);
   border-radius: 15px;
   box-shadow: 0 0 5px rgba(18, 14, 39, 0.8);
-  margin: 50px;
+  margin-top: 70px;
+  margin-left: 25%;
   width: 50%;
 }
 
@@ -80,7 +81,7 @@ input {
   color: white;
   text-decoration: none;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 a {

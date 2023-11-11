@@ -26,7 +26,7 @@ export const Navbar = () => {
       
       
       {!cookies.access_token ? ( 
-      <Link to='/register'>Login/Register</Link>
+      <Link to='/register'>CREATE ACCOUNT</Link>
       ) : (
         <button onClick={logout}>
           <FaSignOutAlt />Logout
