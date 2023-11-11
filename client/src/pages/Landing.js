@@ -1,5 +1,7 @@
  import image from '../images/image.png'
  import image2 from '../images/img2.png'
+ import { Link } from 'react-router-dom'
+ 
  
  export const Landing = () => {
     return (
@@ -29,8 +31,9 @@
 
   
         <div className="cta-buttons">
-          <button>Sign Up</button>
-          <button>Log In</button>
+          <Link to={'/register'}><button>Sign Up</button></Link>
+          <Link to={'/login'}><button>Log In</button></Link>
+
         </div>
       </div>
     );

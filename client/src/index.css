@@ -226,9 +226,8 @@ button :hover {
 }
 
 .cta-buttons{
-  margin-left: 70%;
+  margin-left: 60%;
   margin-top: 12%;
-  /* transform: translate(10%, 1195%); */
 
 }
 
@@ -245,13 +244,13 @@ footer {
   margin-top: 10%;
 }
 
-footer p {
-  /* margin-top: 15px; */
+/* footer p {
+  margin-top: 15px;
 }
 
 nav {
-  /* margin-top: 5px; */
-}
+  margin-top: 5px;
+} */
 
 nav a {
   color: #fff;
