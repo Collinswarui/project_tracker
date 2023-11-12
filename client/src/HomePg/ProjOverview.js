@@ -2,7 +2,7 @@ import React from 'react'
 
 export const ProjectOverview = ({ projects = [] }) => {
     return(
-        <div className='overview'>
+        <div className='home'>
             <h3>Project Overview</h3>
             <ul>
                 {projects.map((project) => (
