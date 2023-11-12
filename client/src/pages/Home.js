@@ -1,8 +1,11 @@
+import { ProjectOverview } from "../components/ProjOverview"
 
-export const Home = () => {
+
+export const Home = ({ projects }) => {
   return (
     <div>
-      Home
+      <h2>Welcome to your Projects</h2>
+      <ProjectOverview projects={projects} />
     </div>
   )
 }
